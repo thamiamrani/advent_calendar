@@ -61,12 +61,9 @@ if __name__ == "__main__":
     print("first_total: " + str(first_total))
     # second part
     r_2=[]
-    for i in range(len(r)):
-        if (i)%3 == 0:
-            sacks = r[i-3:i]
-            if sacks == []:
-                continue
-            r_2.append(sacks)
+    for i in range(0, len(r), 3):
+        sacks = r[i:i+3]
+        r_2.append(sacks)
     test = [["vJrwpWtwJgWrhcsFMMfFFhFpasdf", "ajqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSLasdf", "aPmmdzqPrVvPwwTWBwgsdf"], ["wMqvLMZHhHMvwLHjbvcjnnSBnvTQFnsdf", "ttgJtRGJQctTZtZTsdf", "CrZsJsPPZsGzwwsLwLmpwMDwsdf"]]
     second_total = 0
     for i in r_2:
